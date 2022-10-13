@@ -12,67 +12,75 @@
     <style>
         input[type='number']::-webkit-inner-spin-button,
         input[type='number']::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
+            -webkit-appearance: none;
+            margin: 0;
         }
-      
+
         .custom-number-input input:focus {
-          outline: none !important;
+            outline: none !important;
         }
-      
+
         .custom-number-input button:focus {
-          outline: none !important;
+            outline: none !important;
         }
+
         .quantity {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-.quantity__minus,
-.quantity__plus {
-  display: block;
-  width: 22px;
-  height: 23px;
-  margin: 0;
-  background: #dee0ee;
-  text-decoration: none;
-  text-align: center;
-  line-height: 23px;
-}
-.quantity__minus:hover,
-.quantity__plus:hover {
-  background: #575b71;
-  color: #fff;
-} 
-.quantity__minus {
-  border-radius: 3px 0 0 3px;
-}
-.quantity__plus {
-  border-radius: 0 3px 3px 0;
-}
-.quantity__input {
-  width: 32px;
-  height: 19px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border-top: 2px solid #dee0ee;
-  border-bottom: 2px solid #dee0ee;
-  border-left: 1px solid #dee0ee;
-  border-right: 2px solid #dee0ee;
-  background: #fff;
-  color: #8184a1;
-}
-.quantity__minus:link,
-.quantity__plus:link {
-  color: #8184a1;
-} 
-.quantity__minus:visited,
-.quantity__plus:visited {
-  color: #fff;
-}
-      </style>
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .quantity__minus,
+        .quantity__plus {
+            display: block;
+            width: 22px;
+            height: 23px;
+            margin: 0;
+            background: #dee0ee;
+            text-decoration: none;
+            text-align: center;
+            line-height: 23px;
+        }
+
+        .quantity__minus:hover,
+        .quantity__plus:hover {
+            background: #575b71;
+            color: #fff;
+        }
+
+        .quantity__minus {
+            border-radius: 3px 0 0 3px;
+        }
+
+        .quantity__plus {
+            border-radius: 0 3px 3px 0;
+        }
+
+        .quantity__input {
+            width: 45px;
+            height: 25px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            border-top: 2px solid #dee0ee;
+            border-bottom: 2px solid #dee0ee;
+            border-left: 1px solid #dee0ee;
+            border-right: 2px solid #dee0ee;
+            background: #fff;
+            color: #8184a1;
+        }
+
+        .quantity__minus:link,
+        .quantity__plus:link {
+            color: #8184a1;
+        }
+
+        .quantity__minus:visited,
+        .quantity__plus:visited {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -491,20 +499,21 @@
                                                 <span class="sr-only">Close panel</span>
                                                 <!-- Heroicon name: outline/x-mark -->
                                                 <a id="cartCloser">
-                                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                    aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </a>
+                                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </a>
                                             </button>
                                         </div>
                                     </div>
 
                                     <div class="mt-8">
                                         <div class="flow-root">
-                                            <ul role="list" class="-my-6 divide-y divide-gray-200" id="listShoppingCart">
+                                            <ul role="list" class="-my-6 divide-y divide-gray-200"
+                                                id="listShoppingCart">
                                                 <!-- <li class="flex py-6">
                                                     <div
                                                         class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -602,10 +611,9 @@
         </div>
 
     </section>
-    
+
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
-

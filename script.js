@@ -179,26 +179,26 @@ function renderTotal() {
 
 
 //Increment Button
-// $(document).ready(function () {
-//     const minus = $('.quantity__minus');
-//     const plus = $('.quantity__plus');
-//     const input = $('.quantity__input');
-//     minus.click(function (e) {
-//         e.preventDefault();
-//         var value = input.val();
-//         if (value > 1) {
-//             value--;
-//         }
-//         input.val(value);
-//     });
+$(document).ready(function () {
+    const minus = $('.quantity__minus');
+    const plus = $('.quantity__plus');
+    const input = $('.quantity__input');
+    minus.click(function (e) {
+        e.preventDefault();
+        var value = input.val();
+        if (value > 1) {
+            value--;
+        }
+        input.val(value);
+    });
 
-//     plus.click(function (e) {
-//         e.preventDefault();
-//         var value = input.val();
-//         value++;
-//         input.val(value);
-//     })
-// });
+    plus.click(function (e) {
+        e.preventDefault();
+        var value = input.val();
+        value++;
+        input.val(value);
+    })
+});
 
 //
 function renderShoppingCart() {
@@ -223,7 +223,11 @@ function renderShoppingCart() {
                     </div>
                     <p class="mt-1 text-sm text-gray-500">Salmon</p>
                 </div>
-                
+                <div class="flex flex-1 items-end justify-between text-sm">
+                <div class="quantity">
+                <a href="#" class="quantity__minus"><span>-</span></a>
+                <input name="quantity" type="text" class="quantity__input" value="1">
+                <a href="#" class="quantity__plus"><span>+</span></a>
               </div>
                     <div class="flex">
                         <button type="button"
