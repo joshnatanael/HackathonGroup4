@@ -122,12 +122,17 @@ const product={
     }
 }
 
+const menSection=document.querySelector("#menProducts");
+
 for(let keys in product){
-    document.body.innerHTML+=`
-    <img src="${product[keys].gambarUrl}" alt="${product[keys].productName}" width="100px">
-    <h1>${product[keys].brand}</h1>
-    <h2>${product[keys].productName}</h2>
-    <h2>${product[keys].harga}</h2>`
+    menSection.innerHTML+=`
+    <div class="max-w-sm self-center">
+    <img src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
+    <div class="mt-5 flex flex-col gap-1">
+        <h1 class="font-semibold">${product[keys].brand}</h1>
+        <h1 class="font-bold">${product[keys].productName}</h1>
+        <h1 class="font-light">Rp.${product[keys].harga}</h1>
+    </div>`
 }
 
 
