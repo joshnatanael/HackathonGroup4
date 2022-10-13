@@ -226,7 +226,8 @@ function renderShoppingCart() {
                 <div class="flex flex-1 items-end justify-between text-sm">
                 <div class="quantity">
                 <a href="#" class="quantity__minus"><span>-</span></a>
-                <input name="quantity" type="text" class="quantity__input" value="1">
+                
+                <h1 class="px-5">1</h1>
                 <a href="#" class="quantity__plus"><span>+</span></a>
                 
               </div>
