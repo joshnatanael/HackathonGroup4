@@ -154,6 +154,7 @@ const fadeElems = document.querySelectorAll('.hidden');
 const shoppingCart = document.querySelector('#shoppingCart')
 const cartCloser = document.querySelector('#cartCloser');
 const cartOpener = document.querySelector('.shoppingCartOpener')
+const addItemToCart = document.querySelector('.addItemtoCart')
 buttonCheckout.addEventListener('click', function () {
     console.log('click hamburger');
     shoppingCart.removeAttribute('class')
@@ -167,9 +168,13 @@ cartOpener.addEventListener('click', function (){
     shoppingCart.removeAttribute('class')
 })
 
+addItemToCart.addEventListener('click', function (){
+    shoppingCart.removeAttribute('class')
+})
 cartCloser.addEventListener('click', function () {
     shoppingCart.setAttribute("class", "hidden");
 })
+
 
 let listShoppingCart = document.querySelector("#listShoppingCart");
 
@@ -212,6 +217,7 @@ function renderShoppingCart() {
         <li class="flex py-6">
             <div
                 class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                
                 <img src="${cart[keys].gambarUrl}"
                     alt="${cart[keys].productName}"
                     class="h-full w-full object-cover object-center">
