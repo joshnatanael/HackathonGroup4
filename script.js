@@ -469,7 +469,7 @@ function renderShoppingCart() {
                         <div
                             class="flex justify-between text-base font-medium text-gray-900">
                             <h3>
-                                <a href="#">${cart[keys].productName}</a>
+                                <a>${cart[keys].productName}</a>
                             </h3>
                             <p class="ml-4">${cart[keys].harga}</p>
                         </div>
@@ -477,10 +477,10 @@ function renderShoppingCart() {
                     </div>
                     <div class="flex flex-1 items-end justify-between text-sm">
                     <div class="quantity mt-1">
-                    <a href="#" class="quantity__minus"><span>-</span><h6 style="display:none;">${keys}</h6></a>
+                    <a class="quantity__minus"><span>-</span><h6 style="display:none;">${keys}</h6></a>
                     
                     <h1 class="px-5" qty>${cart[keys].qty}</h1>
-                    <a href="#" class="quantity__plus"><span>+</span><h6 style="display:none;">${keys}</h6></a>
+                    <a class="quantity__plus"><span>+</span><h6 style="display:none;">${keys}</h6></a>
                     
                   </div>
                         <div class="flex">
