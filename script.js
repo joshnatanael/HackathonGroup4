@@ -155,4 +155,44 @@ cartCloser.addEventListener('click' , function(){
   shoppingCart.setAttribute("class", "hidden");
 })
 
+let keranjang = {};
+
+let tambahKeKeranjang = function(index, unit = 1){
+    
+    if (keranjang[index] === undefined){
+        keranjang[index] = product[index];
+    }
+    
+    keranjang[index]['jumlahUnit'] = unit;
+    keranjang[index]['hargaTotal'] = keranjang[index]['harga'] * unit;
+}
+
+let menghitungHargaBelanja = function(cart = keranjang){
+    let hargaBelanjaan = 0;
+    for (let barang in cart){
+        hargaBelanjaan += cart[barang]['hargaTotal']
+    }
+    return hargaBelanjaan
+}
+
+let tambahJumlah = function(index, cart = keranjang){
+    cart[index]['jumlahUnit']++;
+    cart[index]['hargaTotal'] = cart[index]['harga'] * cart[index]['jumlahUnit'];
+}
+
+let hapusBelanjaan = function(index, cart = keranjang){
+    let keranjangBaru = {};
+    for (let barang in cart){
+        if (barang !== index.toString()){
+            keranjangBaru[barang] = cart[barang];
+        }
+    }
+    
+    keranjang = keranjangBaru;
+}
+
+let kurangJumlah = function(index, cart = keranjang){
+    cart[index]['jumlahUnit']--;
+    cart[index]['hargaTotal'] = cart[index]['harga'] * cart[index]['jumlahUnit'];
+}
 
