@@ -1,3 +1,4 @@
+let listShoppingCart = document.querySelector("#listShoppingCart");
 const product = {
     1: {
         brand: "Nike",
@@ -417,6 +418,8 @@ for(let keys in product){
     </div>`
 }
 
+// EndSection
+
 let cart = {};
 
 const productClick = document.querySelectorAll(".product-click");
@@ -443,7 +446,9 @@ buttonCheckout.addEventListener('click', function () {
     // }
 
 });
-
+cartCloser.addEventListener('click' , function(){
+    shoppingCart.setAttribute("class", "hidden");
+  })
 cartOpener.addEventListener('click', function () {
     shoppingCart.removeAttribute('class')
 })
@@ -451,12 +456,9 @@ cartOpener.addEventListener('click', function () {
 addItemToCart.addEventListener('click', function () {
     shoppingCart.removeAttribute('class')
 })
-cartCloser.addEventListener('click', function () {
-    shoppingCart.setAttribute("class", "hidden");
-})
 
 
-let listShoppingCart = document.querySelector("#listShoppingCart");
+
 
 function renderTotal() {
     let total = 0;
