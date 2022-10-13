@@ -128,7 +128,7 @@ for (let keys in product) {
     menSection.innerHTML += `
     <div class="max-w-sm self-center product-click ">
     <div class="img-container active:-translate-y-6 duration-300 cursor-pointer">
-        <img class="hover:scale-110 duration-300" src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
+        <img class="hover:scale-110 duration-300 w-[278px] h-[400px]" src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
         </div>
         <div class="mt-7 flex flex-col gap-1">
             <h1 class="font-semibold text-xl">${product[keys].brand}</h1>
@@ -136,6 +136,284 @@ for (let keys in product) {
             <h1 class="font-light text-xl tracking-wider">Rp. ${product[keys].harga}</h1>
             <h6 style="display:none;">${keys}</h1>
         </div>
+    </div>`
+}
+
+//WomanProduct
+const womanProducts = {
+    1:{
+        brand:"Old Navy",
+        productName:"Long-Sleeve Plaid Flannel Boyfriend Tunic Shirt for Women",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/607/393/cn50607393.jpg",
+        harga:320000
+    },
+    2:{
+        brand:"Old Navy",
+        productName:"Cozy Plush-Yarn Cocoon Tunic Sweater for Women",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/585/771/cn50585771.jpg",
+        harga:459000
+    },
+    3:{
+        brand:"Old Navy",
+        productName:"Heathered Waffle-Knit Open-Front Cardigan for Women ",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/750/759/cn50750759.jpg",
+        harga:432900
+    },
+    4:{
+        brand:"Old Navy",
+        productName:"Uniform Pique Polo Shirt for Women ",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/328/656/cn50328656.jpg",
+        harga:150000
+    },
+    5:{
+        brand:"Old Navy",
+        productName:"Oversized Boyfriend Garment-Dyed Tunic Sweatshirt for Women",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/855/331/cn50855331.jpg",
+        harga:400000
+    },
+    6:{
+        brand:"Nike",
+        productName:"Nike Sportswear Phoenix Fleece",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0c5bb7ee-69c6-4ce2-b4c3-66ec08e98167/sportswear-phoenix-fleece-over-oversized-crew-neck-sweatshirt-gGzPT0.png",
+        harga:899000
+
+    },
+    7:{
+        brand:"Nike",
+        productName:"Nike Sportswear Phoenix Fleece Women's Over-Oversized Pullover Hoodie",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/39d041a0-9c0d-4327-b080-210b04b28ef6/sportswear-phoenix-fleece-over-oversized-pullover-hoodie-s4mSXr.png",
+        harga:949000
+    },
+    8:{
+        brand:"Nike",
+        productName:"Nike Sportswear Women's T-Shirt (Plus Size)",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7e8fb2b2-2386-4052-a10c-c7ca365baa98/sportswear-t-shirt-kQ3fXF.png",
+        harga:349000
+    },
+    9:{
+        brand:"Nike",
+        productName:"Nike Swoosh Fly Women's Boxy Long-Sleeve T-Shirt",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/11b252dd-87c9-4ee2-8a3e-49d31c58871d/swoosh-fly-boxy-long-sleeve-t-shirt-dHvtdw.png",
+        harga:429000
+    },
+    10:{
+        brand:"Nike",
+        productName:"Nike Sportswear Icon Clash Women's Short-Sleeve Tie Top",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e42dbedf-8a3a-4f94-be8d-eef8567e4423/sportswear-icon-clash-short-sleeve-tie-top-GdbMh0.png",
+        harga:559000
+    },
+    11:{
+        brand:"Hush Puppies",
+        productName:"DC RIANDA IN BROWN",
+        gambarUrl:"https://www.hushpuppies.co.id/media/catalog/product/cache/c1e792f8b86561bd65194f05e9ff9cd0/l/a/la23111br-brown-1.jpg",
+        harga:229000
+    },
+    12:{
+        brand:"Hush Puppies",
+        productName:"WINDA IN NAVY",
+        gambarUrl:"https://www.hushpuppies.co.id/media/catalog/product/cache/c1e792f8b86561bd65194f05e9ff9cd0/l/a/la22377nv-navy-1.jpg",
+        harga:449000
+    },
+    13:{
+        brand:"Hush Puppies",
+        productName:"HUSH PUPPIES PAKAIAN POLO WANITA ARUSHA IN MUSTARD",
+        gambarUrl:"https://www.hushpuppies.co.id/media/catalog/product/cache/c1e792f8b86561bd65194f05e9ff9cd0/l/a/la22406md-mustard-1.jpg",
+        harga:200000
+    },
+    14:{
+        brand:"Hush Puppies",
+        productName:"ILONA IN NAVY/WHITE",
+        gambarUrl:"https://www.hushpuppies.co.id/media/catalog/product/cache/c1e792f8b86561bd65194f05e9ff9cd0/l/a/la21435nv-1.jpg",
+        harga:150000
+    },
+    15:{
+        brand:"Hush Puppies",
+        productName:"ARDITH IN PINK",
+        gambarUrl:"https://www.hushpuppies.co.id/media/catalog/product/cache/c1e792f8b86561bd65194f05e9ff9cd0/l/a/la21435nv-1.jpg",
+        harga:150000
+    },
+    16:{
+        brand:"Giodarno",
+        productName:"Women's Embroidery Pique Polo Shirt",
+        gambarUrl:"https://images.giordano.com/productphoto/13311003001/95_2_0_3_0620_0620.jpg",
+        harga:250000
+    },
+    17:{
+        brand:"Giodarno",
+        productName:"Rainbow button slim stretchy polo shirt",
+        gambarUrl:"https://images.giordano.com/productphoto/05311388001/94_2_0_3_0620_0620.jpg",
+        harga:250000
+    },
+    18:{
+        brand:"Giodarno",
+        productName:"Solid color lotus edge short polo shirt",
+        gambarUrl:"https://images.giordano.com/productphoto/18311011001/03_2_0_3_0620_0620.jpg",
+        harga:350000
+    },
+    19:{
+        brand:"Giodarno",
+        productName:"Double pockets long sleeve denim shirt",
+        gambarUrl:"https://images.giordano.com/productphoto/18342002001/52_2_0_3_0620_0620.jpg",
+        harga:1000000
+    },
+    20:{
+        brand:"Giodarno",
+        productName:"Stripe double vents long-sleeve tee",
+        gambarUrl:"https://images.giordano.com/productphoto/13321802001/04_2_0_3_0620_0620.jpg",
+        harga:150000
+    }
+}
+const womanSection=document.querySelector("#womanProducts");
+
+for(let keys in womanProducts){
+    womanSection.innerHTML+=`
+    <div class="max-w-sm self-center product-click ">
+    <div class="img-container active:-translate-y-6 duration-300 cursor-pointer">
+    <img class="hover:scale-110 duration-300 w-[278px] h-[400px]" src="${womanProducts[keys].gambarUrl}" alt="${womanProducts[keys].productName}">
+    </div>
+    <div class="mt-7 flex flex-col gap-1">
+        <h1 class="font-semibold text-xl">${womanProducts[keys].brand}</h1>
+        <h1 class="font-bold text-lg">${womanProducts[keys].productName}</h1>
+        <h1 class="font-light text-xl tracking-wider">Rp. ${womanProducts[keys].harga}</h1>
+    </div>`
+}
+
+// Kids Products
+
+const kidProducts = {
+    1:{
+        brand:"Old Navy",
+        productName:"Printed Microfleece Pajama Top & Pajama Joggers Set for Girls",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0020/688/273/cn20688273.jpg",
+        harga:250000
+    },
+    2:{
+        brand:"Old Navy",
+        productName:"Vintage Slouchy Graphic Raw-Edged Hoodie for Girls",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/851/338/cn50851338.jpg",
+        harga:250000
+    },
+    3:{
+        brand:"Old Navy",
+        productName:"Plaid Flannel Utility Pocket Shirt for Boys",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/645/889/cn50645889.jpg",
+        harga:120000
+    },
+    4:{
+        brand:"Old Navy",
+        productName:"Techie Fleece Tapered Sweatpants for Boys",
+        gambarUrl:"https://oldnavy.gap.com/webcontent/0050/589/079/cn50589079.jpg",
+        harga:800000
+    },
+    5:{
+        brand:"Nike",
+        productName:"Nike Sportswear Older Kids' (Boys') T-Shirt",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e5f3099-09e2-44fd-b4a5-30198976ed15/sportswear-older-t-shirt-5Vdq4h.png",
+        harga:260000
+    },
+    6:{
+        brand:"Nike",
+        productName:"Nike Dri-FIT Legend Older Kids' (Girls') T-Shirt",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c4f14f8a-d8bb-4ec2-93dc-7b21627fdf0e/dri-fit-legend-older-t-shirt-3RdsJ5.png",
+        harga:160000
+
+    },
+    7:{
+        brand:"Nike",
+        productName:"Nike Blazer Mid '77 D Older Kids' Shoes",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/848bcf22-b9f6-4e08-9df4-368edb07cd93/blazer-mid-77-d-older-shoes-1Cv7jt.png",
+        harga:300000
+    },
+    8:{
+        brand:"Nike",
+        productName:"Nike Flex PlusOlder Kids' Road Running Shoes",
+        gambarUrl:"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e60832f1-da08-426b-bf9a-77de3b3ecd77/flex-plus-older-road-running-shoes-mwbkdj.png",
+        harga:200000
+    },
+    9:{
+        brand:"Adidas",
+        productName:"HOODIE ADIDAS X DISNEY MICKEY MOUSE (BOYS)",
+        gambarUrl:"https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/h/k/hk4695_2_apparel_photography_front_center_view_grey.jpg",
+        harga:700000
+    },
+    10:{
+        brand:"Adidas",
+        productName:"SEPATU HARDEN STEPBACK 3",
+        gambarUrl:"https://www.adidas.co.id/media/catalog/product/cache/ffbe5d912e2813a20bb27461a01c1e7c/g/w/gw6578_sl_ecom.jpg",
+        harga:700000
+    },
+    11:{
+        brand:"Adidas",
+        productName:"SEPATU ADIDAS X DISNEY SURU365 MUPPET KERMIT SLIP-ON",
+        gambarUrl:"https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/g/y/gy6679_sl_ecom.jpg",
+        harga:800000
+    },
+    12:{
+        brand:"Adidas",
+        productName:"HOODIE ADIDAS X DISNEY MICKEY MOUSE (GIRLS)",
+        gambarUrl:"https://www.adidas.co.id/media/catalog/product/cache/ffbe5d912e2813a20bb27461a01c1e7c/h/k/hk6661_2_apparel_photography_front_center_view_grey.jpg",
+        harga:700000
+    },
+    13:{
+        brand:"Puma",
+        productName:"Puma Kids Fruits BB Unisex Caps - Blue",
+        gambarUrl:"https://www.planetsports.asia/media/catalog/product/cache/932b880b51303ef8bdfacfab1d810ff5/0/1/01-PUMA-E04HPPMA0-PMA023700-01-Blue.jpg",
+        harga:200000
+    },
+    14:{
+        brand:"Puma",
+        productName:"PUMA X SW Boys Tee - Black",
+        gambarUrl:"https://www.planetsports.asia/media/catalog/product/cache/932b880b51303ef8bdfacfab1d810ff5/0/1/01-PUMA-AYAV6PMA0-PMA846970-43-Black.jpg",
+        harga:240000
+    },
+    15:{
+        brand:"Puma",
+        productName:"Puma PUMA X SW Boys Sweatpants TR Cl - Black",
+        gambarUrl:"https://www.planetsports.asia/media/catalog/product/cache/932b880b51303ef8bdfacfab1d810ff5/0/1/01-PUMA-AYAPNPMA0-PMA846973-01-Black.jpg",
+        harga:730000
+    },
+    16:{
+        brand:"Puma",
+        productName:"Puma ESS+ 2 Col Logo Boys Tee - Black",
+        gambarUrl:"https://www.planetsports.asia/media/catalog/product/cache/932b880b51303ef8bdfacfab1d810ff5/0/1/01-PUMA-AYAV6PMA0-PMA586985-97-Black.jpg",
+        harga:239000
+    },
+    17:{
+        brand:"Reebok",
+        productName:"Question Mid Basketball Shoes - Grade School",
+        gambarUrl:"https://assets.reebok.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ca469f6fa1214a99bf05aef500f418c3_9366/Question_Mid_Basketball_Shoes_-_Grade_School_Orange_HP3005_01_standard.jpg",
+        harga:750000
+    },
+    18:{
+        brand:"Reebok",
+        productName:"Weebok Storm X Shoes - Toddler",
+        gambarUrl:"https://assets.reebok.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6fa434d5f84d4fd39072ae36009d3db4_9366/Weebok_Storm_X_Shoes_-_Toddler_Black_GV8555_01_standard.jpg",
+        harga:500000
+    },
+    19:{
+        brand:"Reebok",
+        productName:"Zig Dynamica 2 Shoes - Grade School",
+        gambarUrl:"https://assets.reebok.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bf1b4a2b47e247e38cc6adbf00b7f963_9366/Zig_Dynamica_2_Shoes_-_Grade_School_Grey_GY6867_01_standard.jpg",
+        harga:700000
+    },
+    20:{
+        brand:"Reebok",
+        productName:"Classic Leather Shoes - Toddler",
+        gambarUrl:"https://assets.reebok.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b1024a6352174cd8adb6aedd013b34c7_9366/Classic_Leather_Shoes_-_Toddler_Pink_HQ3906_01_standard.jpg",
+        harga:450000
+    }
+}
+const kidsSection=document.querySelector("#kidProducts");
+
+for(let keys in product){
+    kidsSection.innerHTML+=`
+    <div class="max-w-sm self-center product-click ">
+    <div class="img-container active:-translate-y-6 duration-300 cursor-pointer">
+    <img class="hover:scale-110 duration-300 w-[278px] h-[400px]" src="${kidProducts[keys].gambarUrl}" alt="${kidProducts[keys].productName}">
+    <div class="mt-5 flex flex-col gap-1">
+        <h1 class="font-semibold text-xl">${kidProducts[keys].brand}</h1>
+        <h1 class="font-bold text-lg">${kidProducts[keys].productName}</h1>
+        <h1 class="font-light text-xl tracking-wider">Rp.${kidProducts[keys].harga}</h1>
     </div>`
 }
 
