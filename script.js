@@ -485,31 +485,41 @@ function renderShoppingCart() {
                   </div>
                         <div class="flex">
                             <button type="button"
-                                class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                class="font-medium text-indigo-600 hover:text-indigo-500 removeButton">Remove</button>
                         </div>
                     </div>
                 </div>
-            </li>`
+            </li>`;
+            const plusButtons= document.querySelector(".quantity__plus");
+            plusButtons.addEventListener("click", function () {
+                increment(keys);
+            })
+            const minButtons= document.querySelector(".quantity__minus");
+            minButtons.addEventListener("click", function () {
+                decrement(keys);
+            })
+            const removeButton=document.querySelector(".removeButton");
+            removeButton.addEventListener("click", function () {
+                remove(keys);
+            })
         }
     }
 }
 
-const plusButtons= document.querySelectorAll(".quantity__plus");
-for (const plusButton of plusButtons) {
-    plusButton.addEventListener("click", function () {
-        console.log("klik plus")
-        cart[plusButton.querySelector("h6").innerText].qty++;
-        renderShoppingCart();
-        renderTotal();
-    })
+function increment(keys){
+    cart[keys].qty++;
+    renderShoppingCart();
+    renderTotal();
 }
 
-const minButtons= document.querySelectorAll(".quantity__minus");
-for (const minButton of minButtons) {
-    minButton.addEventListener("click", function () {
-        console.log("klik min")
-        cart[minButton.querySelector("h6").innerText].qty--;
-        renderShoppingCart();
-        renderTotal();
-    })
+function decrement(keys){
+    cart[keys].qty--;
+    renderShoppingCart();
+    renderTotal();
+}
+
+function remove(keys){
+    cart[keys].qty=0;
+    renderShoppingCart();
+    renderTotal();
 }
