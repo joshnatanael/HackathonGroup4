@@ -153,7 +153,7 @@ const buttonCheckout = document.querySelector('#checkoutNavbar');
 const fadeElems = document.querySelectorAll('.hidden');
 const shoppingCart = document.querySelector('#shoppingCart')
 const cartCloser = document.querySelector('#cartCloser');
-
+const cartOpener = document.querySelector('.shoppingCartOpener')
 buttonCheckout.addEventListener('click', function () {
     console.log('click hamburger');
     shoppingCart.removeAttribute('class')
@@ -162,6 +162,10 @@ buttonCheckout.addEventListener('click', function () {
     // }
 
 });
+
+cartOpener.addEventListener('click', function (){
+    shoppingCart.removeAttribute('class')
+})
 
 cartCloser.addEventListener('click', function () {
     shoppingCart.setAttribute("class", "hidden");
