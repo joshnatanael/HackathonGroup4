@@ -1,9 +1,797 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Gelora</title>
-    </head>
-    <body>
-        <script src="script.js"></script>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Alzora</title>
+</head>
+
+<body>
+    <!-- <div class="flex items-center justify-center h-[100vh] bg-sky-50">
+        <h1 class="text-7xl text-center font-semibold">
+            Hello world!
+        </h1>
+    </div> -->
+    <section>
+        <h1 class="text-center bg-slate-50 py-2 font-semibold text-lg">Free Shipping over 100€</h1>
+        <nav class="flex justify-between px-14 font-semibold text-xl py-7">
+            <h1>Alamo</h1>
+            <div class="flex gap-10">
+                <a href="">Men Fashion</a>
+                <a href="">Woman Fashion</a>
+                <a href="">Kids Fashion</a>
+
+            </div>
+            <div class="flex gap-7">
+                <a href="#" id="checkoutNavbar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+                <a href="">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32" height="32"
+                        viewBox="0 0 187.059 187.059" style="enable-background:new 0 0 187.059 187.059;"
+                        xml:space="preserve">
+                        <g>
+                            <path d="M187.059,58.289c0-20.368-11.083-39.104-28.912-48.914c-20.696-11.472-47.617-7.946-64.6,7.672
+		C76.443,1.458,49.639-2.061,28.887,9.375C11.079,19.184,0,37.92,0,58.289c0,5.846,0.928,11.667,2.588,16.568
+		c3.349,15.022,15.981,31.122,30.646,45.468L4.208,147.854c-0.929,0.895-1.303,2.229-0.947,3.465
+		c0.356,1.242,1.391,2.197,2.658,2.436l23.258,4.67l4.631,23.236c0.255,1.254,1.184,2.266,2.402,2.643
+		c0.317,0.109,0.655,0.135,0.996,0.135c0.91,0,1.796-0.348,2.457-1.018l31.457-31.73c10.102,7.307,17.795,12.281,18.746,12.891
+		l3.684,2.326l3.685-2.326c0.913-0.591,7.964-5.151,17.372-11.874l29.161,30.678c0.651,0.669,1.57,1.054,2.496,1.054
+		c0.323,0,0.646-0.037,0.962-0.135c1.242-0.341,2.187-1.357,2.442-2.643l4.634-23.236l23.248-4.67
+		c1.236-0.238,2.234-1.121,2.618-2.302c0.39-1.218,0.11-2.491-0.742-3.416l-25.514-27.7c14.577-14.205,27.114-30.062,30.372-44.791
+		C186.133,69.956,187.059,64.134,187.059,58.289z M39.339,173.909l-3.824-19.107c-0.268-1.389-1.352-2.436-2.725-2.703
+		l-18.974-3.824l24.555-23.303c9.216,8.519,18.657,16.264,27.112,22.59L39.339,173.909z M150.682,152.098
+		c-1.376,0.268-2.46,1.314-2.728,2.703l-3.782,18.943l-23.912-25.166c8.812-6.527,18.773-14.578,28.534-23.577l21.36,23.181
+		L150.682,152.098z M170.941,71.849c-6.022,27.06-54.814,63.82-77.394,78.636c-22.597-14.815-71.444-51.612-77.615-79.293
+		c-1.373-4.189-2.064-8.519-2.064-12.909c0-15.296,8.318-29.405,21.699-36.803c6.241-3.422,13.244-5.212,20.276-5.212
+		c12.532,0,24.317,5.554,32.373,15.217l5.344,6.424l5.315-6.424c12.586-15.192,35.184-19.521,52.604-10.004
+		c13.39,7.404,21.708,21.507,21.708,36.803C173.188,62.697,172.5,67.014,170.941,71.849z M166.277,58.289
+		c0,3.653-0.591,7.282-1.724,10.766c-0.499,1.449-1.839,2.368-3.301,2.368c-0.353,0-0.725-0.036-1.083-0.17
+		c-1.815-0.572-2.813-2.533-2.211-4.36c0.92-2.801,1.395-5.675,1.395-8.585c0-10.26-5.577-19.692-14.528-24.625
+		c-4.238-2.375-8.817-3.55-13.628-3.55c-1.912,0-3.471-1.522-3.471-3.453c0-1.937,1.559-3.447,3.471-3.447
+		c5.985,0,11.703,1.443,16.977,4.348C159.323,33.725,166.277,45.501,166.277,58.289z" />
+                        </g>
+                    </svg>
+
+                </a>
+            </div>
+        </nav>
+        <h1 class="text-center bg-slate-900 text-white py-3 text-xl">GET 20% SALE WITH COUPONE CODE CGBNJKI25</h1>
+    </section>
+
+    <section class="hero">
+        <div class="flex">
+            <div class="max-h-[65vh] aspect-square flex-1 relative">
+                <img class="object-cover w-full h-full"
+                    src="https://images.unsplash.com/photo-1484800089236-7ae8f5dffc8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                    alt="">
+                    <h1 class="text-3xl text-white font-semibold absolute inset-0 text-center">Shop Woman</h1>
+                <a href="#menSection"
+                    class="bg-white font-light text-xl px-7 py-2 absolute inset-x-0 bottom-16 max-w-fit mx-auto">Shop Woman</a>
+            </div>
+            <div class="max-h-[65vh] aspect-square flex-1 relative">
+                <img class="object-cover w-full h-full"
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                    alt="">
+                    <h1 class="text-3xl text-white font-semibold absolute inset-0 text-center">Shop Men</h1>
+                <a href="#womanSection"
+                    class="bg-white font-light text-xl px-7 py-2 absolute inset-x-0 bottom-16 max-w-fit mx-auto">Shop Men</a>
+            </div>
+            <div class="max-h-[65vh] aspect-square flex-1 relative">
+                <img class="object-cover w-full h-full"
+                    src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                    alt="">
+                    <h1 class="text-3xl text-white font-semibold absolute inset-0 text-center">Shop Kids</h1>
+                <a href="#kidsSection"
+                    class="bg-white font-light text-xl px-7 py-2 absolute inset-x-0 bottom-16 max-w-fit mx-auto">Shop Kids</a>
+            </div>
+        </div>
+        <div class="flex justify-center max-w-7xl gap-5 mx-auto text-2xl py-14">
+            <div class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+                <div>
+                    <h1>Free Shipping</h1>
+                    <h2>From all orders over $100</h2>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+                <div>
+                    <h1>FREE RETURNS</h1>
+                    <h2>Return money within 30 days</h2>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+                <div>
+                    <h1>SECURE SHOPPING</h1>
+                    <h2>You're in safe hands</h2>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+                <div>
+                    <h1>OVER 10,000 STYLES</h1>
+                    <h2>We have everything you need</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menSection">
+        <h1 class="text-center text-2xl font-semibold py-7">Men Section</h1>
+        <div class="grid grid-cols-4 max-w-7xl gap-14 mx-auto justify-center">
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <hr>
+    <section id="womanSection">
+        <h1 class="text-center text-2xl font-semibold py-7">Women Section</h1>
+        <div class="grid grid-cols-4 max-w-7xl gap-14 mx-auto justify-center">
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <hr>
+    <section id="kidsSection">
+        <h1 class="text-center text-2xl font-semibold py-7">Kids Section</h1>
+        <div class="grid grid-cols-4 max-w-7xl gap-14 mx-auto justify-center">
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+            <div class="max-w-sm self-center">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=810&q=80"
+                    alt="">
+                <div class="mt-5 flex flex-col gap-1">
+                    <h1 class="font-semibold">T-Shirt</h1>
+                    <h1 class="font-bold">Wide Cotton Tunic</h1>
+                    <h1 class="font-light">$250.00</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <h1 class="text-center font-bold text-3xl mt-20">WHAT BUYERS SAY</h1>
+        <h2 class="text-center font-semibold text-xl">Latest Buyers Reviews</h2>
+
+        <div class="grid-cols-3 grid justify-center max-w-7xl gap-5 mx-auto py-10">
+            <div>
+                <a href="#"
+                    class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology acquisitions 2021</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                        technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                </a>
+            </div>
+            <div>
+                <a href="#"
+                    class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology acquisitions 2021</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                        technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                </a>
+            </div>
+            <div>
+                <a href="#"
+                    class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology acquisitions 2021</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                        technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bg-stone-900">
+            <h1 class="text-white font-semibold text-3xl text-center pt-10">Want style Ideas and Treats?</h1>
+            <div class="flex items-center mb-3 max-w-2xl mx-auto py-10">
+                <div class="relative w-full mr-3 revue-form-group">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                    </div>
+                    <input
+                        class="revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Your email address..." type="email" name="member[email]" id="member_email"
+                        required="">
+                </div>
+                <div class="revue-form-actions">
+                    <input type="submit" value="Subscribe"
+                        class="cursor-pointer text-white bg-slate-500 hover:bg-slate-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        name="member[subscribe]" id="member_submit">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section id="" class="hidden">
+        <div class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+            <!--
+              Background backdrop, show/hide based on slide-over state.
+          
+              Entering: "ease-in-out duration-500"
+                From: "opacity-0"
+                To: "opacity-100"
+              Leaving: "ease-in-out duration-500"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+            <div class="fixed inset-0 overflow-hidden">
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                        <!--
+                    Slide-over panel, show/hide based on slide-over state.
+          
+                    Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+                      From: "translate-x-full"
+                      To: "translate-x-0"
+                    Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+                      From: "translate-x-0"
+                      To: "translate-x-full"
+                  -->
+                        <div class="pointer-events-auto w-screen max-w-md">
+                            <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                                <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                                    <div class="flex items-start justify-between">
+                                        <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Shopping
+                                            cart</h2>
+                                        <div class="ml-3 flex h-7 items-center">
+                                            <button type="button" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                                                <span class="sr-only">Close panel</span>
+                                                <!-- Heroicon name: outline/x-mark -->
+                                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                    aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-8">
+                                        <div class="flow-root">
+                                            <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                                <li class="flex py-6">
+                                                    <div
+                                                        class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                        <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
+                                                            alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                                                            class="h-full w-full object-cover object-center">
+                                                    </div>
+
+                                                    <div class="ml-4 flex flex-1 flex-col">
+                                                        <div>
+                                                            <div
+                                                                class="flex justify-between text-base font-medium text-gray-900">
+                                                                <h3>
+                                                                    <a href="#">Throwback Hip Bag</a>
+                                                                </h3>
+                                                                <p class="ml-4">$90.00</p>
+                                                            </div>
+                                                            <p class="mt-1 text-sm text-gray-500">Salmon</p>
+                                                        </div>
+                                                        <div class="flex flex-1 items-end justify-between text-sm">
+                                                            <p class="text-gray-500">Qty 1</p>
+
+                                                            <div class="flex">
+                                                                <button type="button"
+                                                                    class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li class="flex py-6">
+                                                    <div
+                                                        class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                                        <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg"
+                                                            alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch."
+                                                            class="h-full w-full object-cover object-center">
+                                                    </div>
+
+                                                    <div class="ml-4 flex flex-1 flex-col">
+                                                        <div>
+                                                            <div
+                                                                class="flex justify-between text-base font-medium text-gray-900">
+                                                                <h3>
+                                                                    <a href="#">Medium Stuff Satchel</a>
+                                                                </h3>
+                                                                <p class="ml-4">$32.00</p>
+                                                            </div>
+                                                            <p class="mt-1 text-sm text-gray-500">Blue</p>
+                                                        </div>
+                                                        <div class="flex flex-1 items-end justify-between text-sm">
+                                                            <p class="text-gray-500">Qty 1</p>
+
+                                                            <div class="flex">
+                                                                <button type="button"
+                                                                    class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <!-- More products... -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
+                                    <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <p>Subtotal</p>
+                                        <p>$262.00</p>
+                                    </div>
+                                    <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at
+                                        checkout.
+                                    </p>
+                                    <div class="mt-6">
+                                        <a href="#"
+                                            class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                                    </div>
+                                    <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                                        <p>
+                                            or
+                                            <button type="button"
+                                                class="font-medium text-indigo-600 hover:text-indigo-500">
+                                                Continue Shopping
+                                                <span aria-hidden="true"> &rarr;</span>
+                                            </button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="checkout hidden">
+
+        <div class="flex items-center justify-center py-8">
+            <button onclick="checkoutHandler(false)"
+                class="py-2 px-10 rounded bg-indigo-600 hover:bg-indigo-700 text-white">Open Modal</button>
+        </div>
+        <div class="w-full h-full bg-black dark:bg-gray-900 bg-opacity-90 top-0 overflow-y-auto overflow-x-hidden fixed sticky-0"
+            id="chec-div">
+            <div class="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700"
+                id="checkout">
+                <div class="flex items-end lg:flex-row flex-col justify-end" id="cart">
+                    <div class="lg:w-1/2 md:w-8/12 w-full lg:px-8 lg:py-14 md:px-6 px-4 md:py-8 py-4 bg-white dark:bg-gray-800 overflow-y-hidden overflow-x-hidden lg:h-screen h-auto"
+                        id="scroll">
+                        <div class="flex items-center text-gray-500 hover:text-gray-600 dark:text-white cursor-pointer"
+                            onclick="checkoutHandler(false)">
+                            <img class="dark:hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/shopping-cart-1-svg1.svg"
+                                alt="previous" />
+                            <img class="dark:block hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/shopping-cart-1-svg1dark.svg"
+                                alt="previous" />
+                            <p class="text-sm pl-2 leading-none dark:hover:text-gray-200">Back</p>
+                        </div>
+                        <p class="lg:text-4xl text-3xl font-black leading-10 text-gray-800 dark:text-white pt-3">Bag
+                        </p>
+                        <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
+                            <div class="md:w-4/12 2xl:w-1/4 w-full">
+                                <img src="https://i.ibb.co/SX762kX/Rectangle-36-1.png" alt="Black Leather Bag"
+                                    class="h-full object-center object-cover md:block hidden" />
+                                <img src="https://i.ibb.co/g9xsdCM/Rectangle-37.pngg" alt="Black Leather Bag"
+                                    class="md:hidden w-full h-full object-center object-cover" />
+                            </div>
+                            <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
+                                <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">RF293</p>
+                                <div class="flex items-center justify-between w-full pt-1">
+                                    <p class="text-base font-black leading-none text-gray-800 dark:text-white">North
+                                        wolf bag</p>
+                                    <select aria-label="Select quantity"
+                                        class="py-2 px-1 border border-gray-200 mr-6 focus:outline-none dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                    </select>
+                                </div>
+                                <p class="text-xs leading-3 text-gray-600 dark:text-white pt-2">Height: 10 inches
+                                </p>
+                                <p class="text-xs leading-3 text-gray-600 dark:text-white py-4">Color: Black</p>
+                                <p class="w-96 text-xs leading-3 text-gray-600 dark:text-white">Composition: 100%
+                                    calf
+                                    leather</p>
+                                <div class="flex items-center justify-between pt-5">
+                                    <div class="flex itemms-center">
+                                        <p
+                                            class="text-xs leading-3 underline text-gray-800 dark:text-white cursor-pointer">
+                                            Add to favorites</p>
+                                        <p class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">
+                                            Remove
+                                        </p>
+                                    </div>
+                                    <p class="text-base font-black leading-none text-gray-800 dark:text-white">
+                                        $9,000
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
+                            <div class="md:w-4/12 2xl:w-1/4 w-full">
+                                <img src="https://i.ibb.co/c6KyDXN/Rectangle-5-1.png" alt="Gray Sneakers"
+                                    class="h-full object-center object-cover md:block hidden" />
+                                <img src="https://i.ibb.co/yVSpYqx/Rectangle-6.png" alt="Gray Sneakers"
+                                    class="md:hidden w-full h-full object-center object-cover" />
+                            </div>
+                            <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
+                                <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">RF293</p>
+                                <div class="flex items-center justify-between w-full pt-1">
+                                    <p class="text-base font-black leading-none text-gray-800 dark:text-white">LW
+                                        sneakers</p>
+                                    <select aria-label="Select quantity"
+                                        class="py-2 px-1 border border-gray-200 mr-6 focus:outline-none dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                    </select>
+                                </div>
+                                <p class="text-xs leading-3 text-gray-600 dark:text-white pt-2">Height: 10 inches
+                                </p>
+                                <p class="text-xs leading-3 text-gray-600 dark:text-white py-4">Color: Black</p>
+                                <p class="w-96 text-xs leading-3 text-gray-600 dark:text-white">Composition: 100%
+                                    calf
+                                    leather</p>
+                                <div class="flex items-center justify-between pt-5">
+                                    <div class="flex itemms-center">
+                                        <p
+                                            class="text-xs leading-3 underline text-gray-800 dark:text-white cursor-pointer">
+                                            Add to favorites</p>
+                                        <p class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">
+                                            Remove
+                                        </p>
+                                    </div>
+                                    <p class="text-base font-black leading-none text-gray-800 dark:text-white">
+                                        $9,000
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
+                            <div class="md:w-4/12 2xl:w-1/4 w-full">
+                                <img src="https://i.ibb.co/6gzWwSq/Rectangle-20-1.png" alt="Black Leather Purse"
+                                    class="h-full object-center object-cover md:block hidden" />
+                                <img src="https://i.ibb.co/TTnzMTf/Rectangle-21.png" alt="Black Leather Purse"
+                                    class="md:hidden w-full h-full object-center object-cover" />
+                            </div>
+                            <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
+                                <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">RF293</p>
+                                <div class="flex items-center justify-between w-full">
+                                    <p class="text-base font-black leading-none text-gray-800 dark:text-white">Luxe
+                                        card
+                                        holder</p>
+                                    <select aria-label="Select quantity"
+                                        class="py-2 px-1 border border-gray-200 mr-6 focus:outline-none dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                    </select>
+                                </div>
+                                <p class="text-xs leading-3 text-gray-600 dark:text-white pt-2">Height: 10 inches
+                                </p>
+                                <p class="text-xs leading-3 text-gray-600 dark:text-white py-4">Color: Black</p>
+                                <p class="w-96 text-xs leading-3 text-gray-600 dark:text-white">Composition: 100%
+                                    calf
+                                    leather</p>
+                                <div class="flex items-center justify-between pt-5">
+                                    <div class="flex itemms-center">
+                                        <p
+                                            class="text-xs leading-3 underline text-gray-800 dark:text-white cursor-pointer">
+                                            Add to favorites</p>
+                                        <p class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">
+                                            Remove
+                                        </p>
+                                    </div>
+                                    <p class="text-base font-black leading-none text-gray-800 dark:text-white">
+                                        $9,000
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-96 md:w-8/12 w-full bg-gray-100 dark:bg-gray-900 h-full">
+                        <div
+                            class="flex flex-col lg:h-screen h-auto lg:px-8 md:px-7 px-4 lg:py-20 md:py-10 py-6 justify-between overflow-y-auto">
+                            <div>
+                                <p class="lg:text-4xl text-3xl font-black leading-9 text-gray-800 dark:text-white">
+                                    Summary</p>
+                                <div class="flex items-center justify-between pt-16">
+                                    <p class="text-base leading-none text-gray-800 dark:text-white">Subtotal</p>
+                                    <p class="text-base leading-none text-gray-800 dark:text-white">$9,000</p>
+                                </div>
+                                <div class="flex items-center justify-between pt-5">
+                                    <p class="text-base leading-none text-gray-800 dark:text-white">Shipping</p>
+                                    <p class="text-base leading-none text-gray-800 dark:text-white">$30</p>
+                                </div>
+                                <div class="flex items-center justify-between pt-5">
+                                    <p class="text-base leading-none text-gray-800 dark:text-white">Tax</p>
+                                    <p class="text-base leading-none text-gray-800 dark:text-white">$35</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center pb-6 justify-between lg:pt-5 pt-20">
+                                    <p class="text-2xl leading-normal text-gray-800 dark:text-white">Total</p>
+                                    <p
+                                        class="text-2xl font-bold leading-normal text-right text-gray-800 dark:text-white">
+                                        $10,240</p>
+                                </div>
+                                <button onclick="checkoutHandler1(true)"
+                                    class="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white dark:hover:bg-gray-700">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                /* width */
+                #scroll::-webkit-scrollbar {
+                    width: 1px;
+                }
+
+                /* Track */
+                #scroll::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+
+                /* Handle */
+                #scroll::-webkit-scrollbar-thumb {
+                    background: rgb(133, 132, 132);
+                }
+            </style>
+        </div>
+
+
+
+    </section>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
