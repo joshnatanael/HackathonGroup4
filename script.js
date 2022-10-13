@@ -383,18 +383,27 @@ for (let keys in product) {
     }
     category.innerHTML += `
     <div class="max-w-sm self-center product-click ">
-    <div class="img-container active:-translate-y-6 duration-300 cursor-pointer">
-        <img class="hover:scale-110 duration-300 w-[278px] h-[400px]" src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
-        </div>
-        <div class="mt-7 flex flex-col gap-1">
-            <h1 class="font-semibold text-xl">${product[keys].brand}</h1>
-            <h1 class="font-bold text-lg">${product[keys].productName}</h1>
-            <h1 class="font-light text-xl tracking-wider">Rp. ${product[keys].harga}</h1>
-            <h6 style="display:none;">${keys}</h6>
-        </div>
-    </div>`
+                <div class="img-container active:-translate-y-6 duration-300 cursor-pointer relative">
+                    <img class="hover:scale-110 duration-300 w-[278px] h-[400px]" src="${product[keys].gambarUrl}"
+                        alt="${product[keys].productName}">
+
+                </div>
+                <div class="flex justify-center">
+                    <span id="pengurang" class="rounded-sm bg-slate-100 p-3 text-center font-bold cursor-pointer">-</span>
+                    <input class="w-12 h-15" type="text" value="1" />
+                    <span id="penambah" class="rounded-sm bg-slate-100 p-3 text-center cursor-pointer font-bold">+</span>
+                </div>
+                <div class="mt-7 flex flex-col gap-1">
+
+                    <h1 class="font-semibold text-xl">${product[keys].brand}</h1>
+                    <h1 class="font-bold text-lg">${product[keys].productName}</h1>
+                    <h1 class="font-light text-xl tracking-wider">Rp. ${product[keys].harga}</h1>
+                    <h6 style="display:none;">${keys}</h6>
+                </div>
+            </div>`
 }
 // EndSection
+
 
 let cart = {};
 
