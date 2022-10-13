@@ -228,6 +228,7 @@ function renderShoppingCart() {
                 <a href="#" class="quantity__minus"><span>-</span></a>
                 <input name="quantity" type="text" class="quantity__input" value="1">
                 <a href="#" class="quantity__plus"><span>+</span></a>
+                
               </div>
                     <div class="flex">
                         <button type="button"
