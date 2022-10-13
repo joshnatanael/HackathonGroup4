@@ -129,3 +129,25 @@ for(let keys in product){
     <h2>${product[keys].productName}</h2>
     <h2>${product[keys].harga}</h2>`
 }
+
+
+
+const buttonCheckout = document.querySelector('#checkoutNavbar');
+const fadeElems = document.querySelectorAll('.hidden');
+const shoppingCart = document.querySelector('#shoppingCart')
+const cartCloser = document.querySelector('#cartCloser');
+
+buttonCheckout.addEventListener('click', function(){
+  console.log('click hamburger');
+shoppingCart.removeAttribute('class')
+  // if(fadeElems.classList.contains("hidden")){
+
+  // }
+
+});
+
+cartCloser.addEventListener('click' , function(){
+  shoppingCart.setAttribute("class", "hidden");
+})
+
+
