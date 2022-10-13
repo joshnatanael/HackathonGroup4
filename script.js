@@ -126,12 +126,14 @@ const menSection = document.querySelector("#menProducts");
 
 for (let keys in product) {
     menSection.innerHTML += `
-    <div class="max-w-sm self-center product-click cursor-pointer">
+    <div class="max-w-sm self-center product-click ">
+    <div class="img-container active:-translate-y-6 duration-300 cursor-pointer">
         <img class="hover:scale-110 duration-300" src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
-        <div class="mt-5 flex flex-col gap-1">
-            <h1 class="font-semibold">${product[keys].brand}</h1>
-            <h1 class="font-bold">${product[keys].productName}</h1>
-            <h1 class="font-light">Rp. ${product[keys].harga}</h1>
+        </div>
+        <div class="mt-7 flex flex-col gap-1">
+            <h1 class="font-semibold text-xl">${product[keys].brand}</h1>
+            <h1 class="font-bold text-lg">${product[keys].productName}</h1>
+            <h1 class="font-light text-xl tracking-wider">Rp. ${product[keys].harga}</h1>
             <h6 style="display:none;">${keys}</h1>
         </div>
     </div>`
@@ -164,11 +166,11 @@ buttonCheckout.addEventListener('click', function () {
 
 });
 
-cartOpener.addEventListener('click', function (){
+cartOpener.addEventListener('click', function () {
     shoppingCart.removeAttribute('class')
 })
 
-addItemToCart.addEventListener('click', function (){
+addItemToCart.addEventListener('click', function () {
     shoppingCart.removeAttribute('class')
 })
 cartCloser.addEventListener('click', function () {
@@ -234,7 +236,7 @@ function renderShoppingCart() {
                     <p class="mt-1 text-sm text-gray-500">Salmon</p>
                 </div>
                 <div class="flex flex-1 items-end justify-between text-sm">
-                <div class="quantity">
+                <div class="quantity mt-1">
                 <a href="#" class="quantity__minus"><span>-</span></a>
                 
                 <h1 class="px-5">1</h1>
