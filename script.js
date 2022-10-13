@@ -126,16 +126,28 @@ const menSection=document.querySelector("#menProducts");
 
 for(let keys in product){
     menSection.innerHTML+=`
-    <div class="max-w-sm self-center">
-    <img src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
-    <div class="mt-5 flex flex-col gap-1">
-        <h1 class="font-semibold">${product[keys].brand}</h1>
-        <h1 class="font-bold">${product[keys].productName}</h1>
-        <h1 class="font-light">Rp.${product[keys].harga}</h1>
+    <div class="max-w-sm self-center product-click">
+        <img src="${product[keys].gambarUrl}" alt="${product[keys].productName}">
+        <div class="mt-5 flex flex-col gap-1">
+            <h1 class="font-semibold">${product[keys].brand}</h1>
+            <h1 class="font-bold">${product[keys].productName}</h1>
+            <h1 class="font-light">Rp.${product[keys].harga}</h1>
+            <h6 style="display:none;">${keys}</h1>
+        </div>
     </div>`
 }
 
+let cart={};
 
+const productClick=document.querySelectorAll(".product-click");
+for(const productButton of productClick){
+    productButton.addEventListener("click",function(){
+        console.log(productButton.querySelector("h6"));
+        cart[productButton.querySelector("h6").innerText]=product[productButton.querySelector("h6").innerText];
+        renderShoppingCart();
+        renderTotal();
+    })
+}
 
 const buttonCheckout = document.querySelector('#checkoutNavbar');
 const fadeElems = document.querySelectorAll('.hidden');
@@ -155,4 +167,76 @@ cartCloser.addEventListener('click' , function(){
   shoppingCart.setAttribute("class", "hidden");
 })
 
+let listShoppingCart=document.querySelector("#listShoppingCart");
 
+function renderTotal(){
+    let total=0;
+    for(let keys in cart){
+        total+=cart[keys].harga;
+    }
+    document.querySelector("#subtotalAll").innerText="Rp. "+total;
+}
+
+function renderShoppingCart(){
+    listShoppingCart.innerHTML="";
+    for(let keys in cart){
+        listShoppingCart.innerHTML+=`
+        <li class="flex py-6">
+            <div
+                class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                <img src="${cart[keys].gambarUrl}"
+                    alt="${cart[keys].productName}"
+                    class="h-full w-full object-cover object-center">
+            </div>
+            <div class="ml-4 flex flex-1 flex-col">
+                <div>
+                    <div
+                        class="flex justify-between text-base font-medium text-gray-900">
+                        <h3>
+                            <a href="#">${cart[keys].productName}</a>
+                        </h3>
+                        <p class="ml-4">${cart[keys].harga}</p>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-500">Salmon</p>
+                </div>
+                <div class="flex flex-1 items-end justify-between text-sm">
+                    <p class="text-gray-500">Qty 1</p>
+                    <div class="flex">
+                        <button type="button"
+                            class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </li>`
+    }
+}
+
+/*
+<li class="flex py-6">
+    <div
+        class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+        <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
+            alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+            class="h-full w-full object-cover object-center">
+    </div>
+    <div class="ml-4 flex flex-1 flex-col">
+        <div>
+            <div
+                class="flex justify-between text-base font-medium text-gray-900">
+                <h3>
+                    <a href="#">Throwback Hip Bag</a>
+                </h3>
+                <p class="ml-4">$90.00</p>
+            </div>
+            <p class="mt-1 text-sm text-gray-500">Salmon</p>
+        </div>
+        <div class="flex flex-1 items-end justify-between text-sm">
+            <p class="text-gray-500">Qty 1</p>
+            <div class="flex">
+                <button type="button"
+                    class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+            </div>
+        </div>
+    </div>
+</li>
+*/
