@@ -457,7 +457,6 @@ const hidden = document.querySelectorAll('.has-fade')
 
 
 buttonCheckout.addEventListener('click', function () {
-    console.log('click hamburger');
     if(shoppingCart.classList.contains('has-fade')){
         shoppingCart.classList.remove('has-fade')
         hidden.forEach(function(element){
