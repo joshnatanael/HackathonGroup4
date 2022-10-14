@@ -543,10 +543,12 @@ function renderShoppingCart() {
                     </div>
                     <div class="flex flex-1 items-end justify-between text-sm">
                     <div class="quantity mt-1">
-                    <a class="quantity__minus"><span>-</span><h6 style="display:none;">${keys}</h6></a>
+                    <a class="quantity__minus" onclick="decrement(${keys})"><span>-</span><h6 style="display:none;">${keys}</h6></a>
                     
-                    <h1 class="px-5" qty>${cart[keys].qty}</h1>
-                    <a class="quantity__plus"><span>+</span><h6 style="display:none;">${keys}</h6></a>
+                    <h1 class="px-5" id="qty${keys}" qty>${cart[keys].qty}</h1>
+                    
+
+                    <a class="quantity__plus" onclick="increment(${keys})"><span>+</span><h6 style="display:none;">${keys}</h6></a>
                     
                   </div>
                         <div class="flex">
@@ -556,14 +558,16 @@ function renderShoppingCart() {
                     </div>
                 </div>
             </li>`;
-            const plusButtons = document.querySelector(".quantity__plus");
-            plusButtons.addEventListener("click", function () {
-                increment(keys);
-            })
-            const minButtons = document.querySelector(".quantity__minus");
-            minButtons.addEventListener("click", function () {
-                decrement(keys);
-            })
+            // const plusButtons = document.querySelector(".quantity__plus");
+            // plusButtons.addEventListener("click", function (indexKey) {
+            //     increment(keys);
+            //     console.log(indexKey)
+                
+            // })
+            // const minButtons = document.querySelector(".quantity__minus");
+            // minButtons.addEventListener("click", function () {
+            //     decrement(keys);
+            // })
             const removeButton = document.querySelector(".removeButton");
             removeButton.addEventListener("click", function () {
                 remove(keys);
@@ -576,6 +580,8 @@ function increment(keys) {
     cart[keys].qty++;
     renderShoppingCart();
     renderTotal();
+
+    // document.getElementById(`qty${keys}`).innerHTML = Number(document.getElementById(`qty${keys}`).innerHTML) + 1
 }
 
 function decrement(keys) {
