@@ -627,3 +627,17 @@ function remove(keys) {
     renderShoppingCart();
     renderTotal();
 }
+
+let newEmail = []
+function sendEmail(){
+    // console.log("bisaa")
+    let input = document.getElementsByName("member[]");
+
+    console.log('List Member')
+    for (let i = 0; i < input.length; i++) {
+        let a = input[i];
+        newEmail.push(`${newEmail.length + 1}: ${a.value}`);
+    }
+    
+    console.log(newEmail)
+}
