@@ -400,6 +400,22 @@ for (let keys in product) {
     else {
         category = menSection;
     }
+    let hargaString="";
+    for(let i=0;i<String(product[keys].harga).length%3;i++){
+        hargaString+=String(product[keys].harga)[i]
+    }
+    let counter=3;
+    if(!hargaString){
+        counter=0;
+    }
+    for(let i=String(product[keys].harga).length%3;i<String(product[keys].harga).length;i++){
+        if(counter===3){
+            hargaString+=".";
+            counter=0;
+        }
+        counter++;
+        hargaString+=String(product[keys].harga)[i]
+    }
     category.innerHTML += `
     <div class="max-w-sm self-center product-click ">
     <div class="img-container active:-translate-y-6 duration-300 cursor-pointer w-[278px] h-[400px]">
@@ -408,7 +424,7 @@ for (let keys in product) {
         <div class="mt-7 flex flex-col gap-1">
             <h1 class="font-bold text-xl">${product[keys].brand}</h1>
             <h1 class="text-sm">${product[keys].productName}</h1>
-            <h1 class="font-light text-xl tracking-wider">Rp. ${product[keys].harga}</h1>
+            <h1 class="font-light text-xl tracking-wider">Rp. ${hargaString}</h1>
             <h6 style="display:none;">${keys}</h6>
         </div>
     </div>`
@@ -508,9 +524,25 @@ cartOpener.addEventListener('click', function () {
 function renderTotal() {
     let total = 0;
     for (let keys in cart) {
-        total += cart[keys].harga * cart[keys].qty;
+            total += cart[keys].harga * cart[keys].qty;
+        }
+    let totalString="";
+    for(let i=0;i<String(total).length%3;i++){
+        totalString+=String(total)[i]
     }
-    document.querySelector("#subtotalAll").innerText = "Rp. " + total;
+    let counter=3;
+    if(!totalString){
+        counter=0;
+    }
+    for(let i=String(total).length%3;i<String(total).length;i++){
+        if(counter===3){
+            totalString+=".";
+            counter=0;
+        }
+        counter++;
+        totalString+=String(total)[i]
+    }
+    document.querySelector("#subtotalAll").innerText = "Rp. " + totalString;
 }
 
 //
@@ -521,6 +553,22 @@ function renderShoppingCart() {
             delete keys;
         }
         else {
+            let hargaString="";
+            for(let i=0;i<String(cart[keys].harga).length%3;i++){
+                hargaString+=String(cart[keys].harga)[i]
+            }
+            let counter=3;
+            if(!hargaString){
+                counter=0;
+            }
+            for(let i=String(cart[keys].harga).length%3;i<String(cart[keys].harga).length;i++){
+                if(counter===3){
+                    hargaString+=".";
+                    counter=0;
+                }
+                counter++;
+                hargaString+=String(cart[keys].harga)[i]
+            }
             listShoppingCart.innerHTML += `
             <li class="flex py-6">
                 <div
@@ -537,7 +585,7 @@ function renderShoppingCart() {
                             <h3>
                                 <a>${cart[keys].productName}</a>
                             </h3>
-                            <p class="ml-4">${cart[keys].harga}</p>
+                            <p class="ml-4">Rp. ${hargaString}</p>
                         </div>
                         <p class="mt-1 text-sm text-gray-500">Salmon</p>
                     </div>
@@ -553,25 +601,11 @@ function renderShoppingCart() {
                   </div>
                         <div class="flex">
                             <button type="button"
-                                class="font-medium text-indigo-600 hover:text-indigo-500 removeButton">Remove</button>
+                                class="font-medium text-indigo-600 hover:text-indigo-500 removeButton" onclick="remove(${keys})">Remove</button>
                         </div>
                     </div>
                 </div>
             </li>`;
-            // const plusButtons = document.querySelector(".quantity__plus");
-            // plusButtons.addEventListener("click", function (indexKey) {
-            //     increment(keys);
-            //     console.log(indexKey)
-                
-            // })
-            // const minButtons = document.querySelector(".quantity__minus");
-            // minButtons.addEventListener("click", function () {
-            //     decrement(keys);
-            // })
-            const removeButton = document.querySelector(".removeButton");
-            removeButton.addEventListener("click", function () {
-                remove(keys);
-            })
         }
     }
 }
@@ -580,8 +614,6 @@ function increment(keys) {
     cart[keys].qty++;
     renderShoppingCart();
     renderTotal();
-
-    // document.getElementById(`qty${keys}`).innerHTML = Number(document.getElementById(`qty${keys}`).innerHTML) + 1
 }
 
 function decrement(keys) {
@@ -594,4 +626,18 @@ function remove(keys) {
     cart[keys].qty = 0;
     renderShoppingCart();
     renderTotal();
+}
+
+let newEmail = []
+function sendEmail(){
+    // console.log("bisaa")
+    let input = document.getElementsByName("member[]");
+
+    console.log('List Member')
+    for (let i = 0; i < input.length; i++) {
+        let a = input[i];
+        newEmail.push(`${newEmail.length + 1}: ${a.value}`);
+    }
+    
+    console.log(newEmail)
 }
