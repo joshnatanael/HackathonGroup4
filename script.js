@@ -546,6 +546,7 @@ function renderShoppingCart() {
                     <a class="quantity__minus" onclick="decrement(${keys})"><span>-</span><h6 style="display:none;">${keys}</h6></a>
                     
                     <h1 class="px-5" id="qty${keys}" qty>${cart[keys].qty}</h1>
+                    
 
                     <a class="quantity__plus" onclick="increment(${keys})"><span>+</span><h6 style="display:none;">${keys}</h6></a>
                     
